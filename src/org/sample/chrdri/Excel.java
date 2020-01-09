@@ -13,16 +13,20 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Excel {
 	
 	public static void main(String[] args) throws IOException {
 		
+		System.setProperty("webdriver.chrome.driver", "F:\\Raja\\Seleniumws\\SelePrac\\driver\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
 		
 		File loc= new File("F:\\Raja\\Seleniumws\\SelePrac\\src\\org\\sample\\chrdri\\Raja.xlsx");
-		Workbook w= new XSSFWorkbook();
 		FileInputStream stream= new FileInputStream(loc);
-		Sheet s = w.getSheet("Sheet1");
+		Workbook w1=new XSSFWorkbook(stream);
+		Sheet s = w1.getSheet("Sheet1");
 		Row r = s.getRow(1);
 		Cell c = r.getCell(1);
         int cellType = c.getCellType();	
