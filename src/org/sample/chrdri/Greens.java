@@ -14,7 +14,7 @@ public static void main(String[] args) {
 		driver.get("http://greenstechnologys.com/contact.php");
 		
 		WebElement textuserName = driver.findElement(By.name("name"));
-		textuserName.sendKeys("Esakkiraja");
+		textuserName.sendKeys("Hari");
 		
 		WebElement emailId = driver.findElement(By.name("email"));
 		emailId.sendKeys("raja1392@gmail.com");
