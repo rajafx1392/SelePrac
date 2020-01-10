@@ -21,7 +21,7 @@ public class ChroDri {
 		WebElement textPassWord = driver.findElement(By.id("pass"));
 		String pre1= textPassWord.getText();
 	    System.out.println(pre1);
-		textPassWord.sendKeys("raja1392");
+		textPassWord.sendKeys("hari");
 		
 		WebElement buttonClick = driver.findElement(By.xpath("//input[@value='Log In']"));
 		buttonClick.click();
